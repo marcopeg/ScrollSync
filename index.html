@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		
+		<title>SlideAccordion | Creates a content accordion that slide and scroll! | Plugin jQuery | www.consulenza-web.com</title>
+		<meta name="description" content="jQuery SlideAccordion Plugin: Creates a content accordion that slide and scroll!!" />
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		
+		
+		
+		
+		
+		<!-- Page Style, don't care about this code -->
+		<style type="text/css">
+		html { text-align:center; background: #fff; font-family: "Trebuchet MS"; font-size:1em; }
+		body { display:block; width:95%; margin:2em auto; text-align:left; }
+		a { color:#0063c5}
+		h1,h2 { margin:0; font-weight:normal; }
+		h2 { font-size:1em; margin-bottom:2em; }
+		.div { border-top:1px solid #444;border-bottom:1px solid #444;margin-bottom:2em;font-size:0.85em;line-height: 1.3em; color:#333; padding:0;}
+		.example { margin:2em 0; background:#f6f6f6; border-radius: 20px; padding:1em; }
+		.example p { font-size:0.9em; text-shadow: 0 1px 0 #fff; color:#333; }
+		.controls { text-align: center;margin-bottom:2em;}
+		.controls input { font-size:1em; padding:0.5em; }
+		.credits { margin-top:3em;text-align: center;font-size:0.8em; background: #ddd; text-shadow: 0 1px 0 #fff; padding:0.2em; }
+		pre { background: #ddd; padding:1em; text-shadow: 0 1px 0 #fff; border-radius: 5px; border:1px solid #fff; }
+		
+		
+		
+		
+		
+		#main-content {
+			background: #eee;
+			margin: 200px 50% 300px 0;
+		}
+		#main-content div {
+			margin:4em 0 200px 0;
+		}
+		
+		
+		#col1, #col2, #col3 {
+			left:51%;
+			
+			display: block;
+			width: 10%;
+			background: #aaa;
+			
+		}
+		
+		#col2 {
+			left:60%;
+			background: #666;
+			color:#fff;
+		}
+		
+		#col3 {
+			left:70%;
+			background: #444;
+			color:#fff;
+		}
+		
+		.log {
+			position:fixed;
+			top:10px;
+			right:10px;
+			
+			background: blue;
+			color:yellow;
+			padding:1em;
+		}
+		</style>
+		
+		
+		
+		
+		
+		
+		<!-- SlideScroll Plugin -->
+		<!-- This is all you need to copy in your page! -->
+		<!--<script src="jquery.scrollto.js"></script>-->
+		<script src="jquery.scrollsync.js"></script>
+		
+		
+		
+		<!-- Functional Script: this activate/deactivate MediaTable -->
+		<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$.scrollSync.defaults.offset = 100;
+			
+			$('#col1').scrollSync({
+				ratio: 1.5
+			});
+			
+			$('#col2').scrollSync({
+				ratio: 2
+			});
+			
+			$('#col3').scrollSync({
+				ratio: 2.5
+			});
+			
+			
+		});
+		</script>
+		
+		
+		
+		
+	</head>
+	<body>
+	
+		<h1 style="margin:200px 0">Test SyncScroll</h1>
+			
+			
+		<div id="main-content">
+			
+			<div id="t01">
+				<h1>#01</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			
+			<div id="t02">
+				<h1>#02</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			
+			<div id="t03">
+				<h1>#03</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			
+			<div id="t04">
+				<h1>#04</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod </p>
+			</div>
+			
+			<div id="t05">
+				<h1>#05</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			
+			<div id="t06">
+				<h1>#06</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			
+		</div>
+		
+		
+		
+		<div id="col1">
+			
+			<div rel="#t01">Link to #01</div>
+			<div rel="#t02">Link to #02</div>
+			<div rel="#t03">Link to #03</div>
+			<div rel="#t04">Link to #04</div>
+			<div rel="#t05">Link to #05</div>
+			<div rel="#t06">Link to #06</div>
+			
+		</div>
+		
+		
+		<div id="col2">
+			
+			<div rel="#t01">Link to #01</div>
+			<div rel="#t02">Link to #02</div>
+			<div rel="#t03">Link to #03</div>
+			<div rel="#t04">Link to #04</div>
+			<div rel="#t05">Link to #05</div>
+			<div rel="#t06">Link to #06</div>
+			
+		</div>
+		
+		<div id="col3">
+			
+			<div rel="#t01">Link to #01</div>
+			<div rel="#t02">Link to #02</div>
+			<div rel="#t03">Link to #03</div>
+			<div rel="#t04">Link to #04</div>
+			<div rel="#t05">Link to #05</div>
+			<div rel="#t06">Link to #06</div>
+			
+		</div>
+
+									
+	</body>
+</html>
